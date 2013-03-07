@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="de" />
-  <App xmlns="" ProductID="{b77e681b-9467-40b1-b92c-4cb292b9d9c7}" Title="Waetter_Mobile" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Waetter_Mobile author" Description="Sample description" Publisher="sadfasdf" PublisherID="{cc34fd5b-a5bd-4fd9-88f9-993e8880e4fb}">
+  <Languages xmlns="">
+    <Language code="de" />
+  </Languages>
+  <App xmlns="" ProductID="{c36a75a4-8c36-4572-8734-8598295b52dc}" Title="Wätter" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Cygarillo" Description="Wätter" Publisher="Wätter" PublisherID="{c08bcb61-0831-4b75-8e4c-8aca08d43646}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -14,12 +17,12 @@
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="Waetter_MobileToken" TaskName="_default">
+      <PrimaryToken TokenID="WätterToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>Waetter_Mobile</Title>
+          <Title>Wätter</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
@@ -28,8 +31,7 @@
           </BackTitle>
           <DeviceLockImageURI>
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>False</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Phone
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Waetter Mobile", "Waetter Mobile\Waetter Mobile.csproj", "{B77E681B-9467-40B1-B92C-4CB292B9D9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wätter", "Wätter\Wätter.csproj", "{C36A75A4-8C36-4572-8734-8598295B52DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,24 @@ Global
 		{B77E681B-9467-40B1-B92C-4CB292B9D9C7}.Release|x86.ActiveCfg = Release|x86
 		{B77E681B-9467-40B1-B92C-4CB292B9D9C7}.Release|x86.Build.0 = Release|x86
 		{B77E681B-9467-40B1-B92C-4CB292B9D9C7}.Release|x86.Deploy.0 = Release|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|ARM.Build.0 = Debug|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|x86.ActiveCfg = Debug|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|x86.Build.0 = Debug|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Debug|x86.Deploy.0 = Debug|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|ARM.ActiveCfg = Release|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|ARM.Build.0 = Release|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|ARM.Deploy.0 = Release|ARM
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|x86.ActiveCfg = Release|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|x86.Build.0 = Release|x86
+		{C36A75A4-8C36-4572-8734-8598295B52DC}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

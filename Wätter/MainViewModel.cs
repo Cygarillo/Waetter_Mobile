@@ -12,7 +12,7 @@ using System.Net;
 using System.IO.IsolatedStorage;
 
 
-namespace Waetter_Mobile
+namespace Wätter
 {
     public class MainViewModel : INotifyPropertyChanged
     {
@@ -57,12 +57,12 @@ namespace Waetter_Mobile
         }
         public MainViewModel()
         {
-            //var localSettings = IsolatedStorageSettings.ApplicationSettings;
+            var localSettings = IsolatedStorageSettings.ApplicationSettings;
 
-            //if (localSettings.Contains("plz"))
-            //    Plz = (int)localSettings["plz"];
-            //else
-            //    Plz = 6300;
+            if (localSettings.Contains("plz"))
+                Plz = (int)localSettings["plz"];
+            else
+                Plz = 6300;
                         
         }
         protected virtual void OnPropertyChanged(string propertyName = null)
