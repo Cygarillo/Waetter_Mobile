@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using System.Net;
+using System.IO.IsolatedStorage;
 
 
 namespace Waetter_Mobile
@@ -25,8 +26,11 @@ namespace Waetter_Mobile
             {
                 plz = value;
                 OnPropertyChanged("Plz");
-                //var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-                //localSettings.Values["plz"] = value;
+                var localSettings = IsolatedStorageSettings.ApplicationSettings;
+                if (localSettings.Contains("plz"))
+                    localSettings["plz"] = value;
+                else
+                    localSettings.Add("plz", value);
 
             }
         }
@@ -53,18 +57,13 @@ namespace Waetter_Mobile
         }
         public MainViewModel()
         {
-            //var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            var localSettings = IsolatedStorageSettings.ApplicationSettings;
 
-            Object o = null;// = localSettings.Values["plz"];
-            if (o == null)
-            {
-                Plz = 6300;
-            }
+            if (localSettings.Contains("plz"))
+                Plz = (int)localSettings["plz"];
             else
-            {
-                plz = (int)o;
-            }
-
+                Plz = 6300;
+                        
         }
         protected virtual void OnPropertyChanged(string propertyName = null)
         {
@@ -77,15 +76,21 @@ namespace Waetter_Mobile
             IsLoading = true;
 
             var client = new WebClient();
-            
-             string webcontent = await client.DownloadStringTask(new Uri("http://meteo.search.ch/" + Plz));
-            
-            
-            string uriString = "http://meteo.search.ch/images/chart/" + GetImageUrl(webcontent);
-            var source = new BitmapImage(new Uri(uriString));
-            ImageSource = source;
-            ExtractDescription(webcontent);
-            IsLoading = false;
+
+            try
+            {
+                string webcontent = await client.DownloadStringTask(new Uri("http://meteo.search.ch/" + Plz));
+
+
+                string uriString = "http://meteo.search.ch/images/chart/" + GetImageUrl(webcontent);
+                var source = new BitmapImage(new Uri(uriString));
+                
+                ImageSource = source;
+                ExtractDescription(webcontent);
+
+            }
+            catch (Exception e) { }
+            finally { IsLoading = false; }
         }
 
         private string GetImageUrl(string webcontent)
