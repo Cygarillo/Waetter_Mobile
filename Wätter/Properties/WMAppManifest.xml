@@ -5,7 +5,7 @@
     <Language code="de" />
   </Languages>
   <App xmlns="" ProductID="{c36a75a4-8c36-4572-8734-8598295b52dc}" Title="Wätter" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Cygarillo" Description="Wätter" Publisher="Cygarillo" PublisherID="{c08bcb61-0831-4b75-8e4c-8aca08d43646}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">Assets\Tiles\Copy of FlipCycleTileMedium.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -36,8 +36,6 @@
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>
-      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
-      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
       <ScreenResolution Name="ID_RESOLUTION_HD720P" />
     </ScreenResolutions>
   </App>
